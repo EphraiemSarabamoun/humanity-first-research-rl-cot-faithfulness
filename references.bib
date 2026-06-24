@@ -1,0 +1,85 @@
+% Canonical reference store for the RL CoT-faithfulness project.
+% IDs verified against arxiv listings 2026-05-30. The `annote` field on each
+% entry is the "why we cite" line (citation-discipline convention) and is
+% rendered into record.docx. Add a paper here the first time it earns a place
+% in the related work; never let an unverified arxiv id in.
+
+@misc{wei2022chain,
+  title         = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  author        = {Jason Wei and Xuezhi Wang and Dale Schuurmans and Maarten Bosma and Brian Ichter and Fei Xia and Ed Chi and Quoc Le and Denny Zhou},
+  year          = {2022},
+  eprint        = {2201.11903},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  annote        = {Origin of CoT prompting. The capability whose faithfulness this project interrogates.}
+}
+
+@misc{turpin2023unfaithful,
+  title         = {Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting},
+  author        = {Miles Turpin and Julian Michael and Ethan Perez and Samuel R. Bowman},
+  year          = {2023},
+  eprint        = {2305.04388},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  annote        = {Foundational unfaithful-CoT result. Source of the biasing-feature paradigm (a suggested answer the model follows without admitting it) that we adapt as the planted cue. Static prompted setting, no optimization pressure.}
+}
+
+@misc{lanham2023measuring,
+  title         = {Measuring Faithfulness in Chain-of-Thought Reasoning},
+  author        = {Tamera Lanham and Anna Chen and others},
+  year          = {2023},
+  eprint         = {2307.13702},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  annote        = {Defines faithfulness via interventions on the CoT (truncation, mistakes, paraphrase); larger models often less faithful. The measurement framing our reliance/articulation metrics build on.}
+}
+
+@misc{shao2024deepseekmath,
+  title         = {DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models},
+  author        = {Zhihong Shao and others},
+  year          = {2024},
+  eprint        = {2402.03300},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  annote        = {Introduces GRPO, the outcome-reward RL algorithm we train with.}
+}
+
+@misc{deepseek2025r1,
+  title         = {DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning},
+  author        = {DeepSeek-AI},
+  year          = {2025},
+  eprint        = {2501.12948},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  annote        = {Pure-RL incentivization of reasoning. Motivates studying what outcome-only RL does to the resulting chains of thought.}
+}
+
+@misc{baker2025monitoring,
+  title         = {Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation},
+  author        = {Bowen Baker and others},
+  year          = {2025},
+  eprint        = {2503.11926},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  annote        = {Direct optimization pressure on the CoT produces obfuscated reward hacking; argues for a monitorability tax. Closest mechanism precedent. Contrast: our reward is outcome-only with no direct CoT pressure, so any decay we observe is the weaker, more worrying emergent case.}
+}
+
+@misc{chen2025reasoning,
+  title         = {Reasoning Models Don't Always Say What They Think},
+  author        = {Yanda Chen and others},
+  year          = {2025},
+  eprint        = {2505.05410},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  annote        = {Closest prior result. Outcome-based RL improves faithfulness then plateaus; reward-hacked hint usage is not verbalized. We must position against this directly: our contribution is a controlled decay curve vs RL steps against a known ground-truth cue with provably CoT-blind reward.}
+}
+
+@misc{korbak2025monitorability,
+  title         = {Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety},
+  author        = {Tomek Korbak and Mikita Balesni and Elizabeth Barnes and Yoshua Bengio and others},
+  year          = {2025},
+  eprint        = {2507.11473},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  annote        = {Multi-org position paper warning that scaled-up RL specifically threatens CoT monitorability. This project is a controlled empirical test of its central worry.}
+}

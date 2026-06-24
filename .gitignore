@@ -1,0 +1,23 @@
+# model checkpoints / adapters / runs (large)
+runs/
+*.safetensors
+*.bin
+*.pt
+adapter_model*
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# data caches
+data/
+*.arrow
+
+# tracking / logs
+wandb/
+*.log
+
+# os
+.DS_Store

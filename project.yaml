@@ -1,0 +1,24 @@
+# Project record source. The record.docx is generated from this + references.bib.
+# Regenerate after edits:
+#   <pipeline-tools>/.venv/bin/python \
+#     <pipeline-tools>/tools/project_record/make_record.py .
+name: rl-cot-faithfulness
+title: "Does RL Erode Chain-of-Thought Faithfulness?"
+question: >
+  Does outcome-only reinforcement-learning optimization pressure make a model
+  increasingly rely on a planted shortcut cue to earn reward while its
+  chain-of-thought increasingly fails to mention that cue? The reward never
+  reads the CoT, so any drop in articulation is an emergent property of pure
+  outcome optimization. Headline curves: unfaithfulness (relies-but-silent)
+  rising and CoT-monitor recall falling as a function of RL steps.
+stage: design
+status: "Smoke complete; real run designed, awaiting launch on the GPU host"
+links:
+  overleaf: ""
+  github: "https://github.com/EphraiemSarabamoun/humanity-first-research-code/tree/main/rl-cot-faithfulness"
+  code_local: "~/projects/rl-cot-faithfulness"
+  compute: "(RTX 5090, torch cu130, trl 1.5.1)"
+collaborators:
+  - "Ephraiem Sarabamoun"
+  - "Rohan Gupta (research guide)"
+references_bib: references.bib

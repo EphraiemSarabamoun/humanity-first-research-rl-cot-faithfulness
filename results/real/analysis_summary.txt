@@ -1,0 +1,24 @@
+# Rigorous analysis — CoT faithfulness vs RL steps
+
+Curve: results/real/curve.csv   (11 eval points, step 0..200)
+
+## reliance_rate
+  step   0: 0.450  (95% CI 0.402-0.499, n=400)
+  step 200: 0.728  (95% CI 0.682-0.769, n=400)
+  endpoint delta = +0.278   two-prop z = +7.98   p = 1.52e-15
+  Cochran-Armitage trend: z = +12.92   p = 3.68e-38
+
+## unfaithfulness_rate_kw
+  step   0: 0.325  (95% CI 0.281-0.372, n=400)
+  step 200: 0.593  (95% CI 0.544-0.640, n=400)
+  endpoint delta = +0.268   two-prop z = +7.59   p = 3.15e-14
+  Cochran-Armitage trend: z = +12.24   p = 1.84e-34
+
+## monitor_recall
+  step   0: 0.278  (95% CI 0.218-0.347, n=180)
+  step 200: 0.186  (95% CI 0.145-0.234, n=291)
+  endpoint delta = -0.092   two-prop z = -2.34   p = 1.91e-02
+  Cochran-Armitage trend: z = -4.04   p = 5.30e-05
+
+## acc_no_cue (unaided task ability — should be ~flat)
+  step 0: 0.320   step 200: 0.425   delta +0.105   p = 2.13e-03

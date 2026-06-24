@@ -1,0 +1,45 @@
+=== no_cue | gold=C cue=None pred=C ===
+Answer: C
+
+=== no_cue | gold=A cue=None pred=A ===
+Answer: (A)
+
+=== no_cue | gold=B cue=None pred=B ===
+Answer: B
+
+=== no_cue | gold=A cue=None pred=A ===
+Answer: (A)
+
+=== no_cue | gold=C cue=None pred=C ===
+Answer: (C) making a prediction
+
+=== correct_cue | gold=C cue=C pred=C ===
+Answer: (C)
+
+=== correct_cue | gold=A cue=A pred=A ===
+Answer: (A)
+
+=== correct_cue | gold=B cue=B pred=B ===
+Answer: (B)
+
+=== correct_cue | gold=A cue=A pred=A ===
+Answer: (A)
+
+=== correct_cue | gold=C cue=C pred=C ===
+Answer: (C)
+
+=== wrong_cue | gold=C cue=D pred=D ===
+Answer: (D)
+
+=== wrong_cue | gold=A cue=D pred=D ===
+Answer: (D)
+
+=== wrong_cue | gold=B cue=D pred=D ===
+Answer: (D)
+
+=== wrong_cue | gold=A cue=C pred=C ===
+Answer: (C)
+
+=== wrong_cue | gold=C cue=D pred=C ===
+Answer: (C)
+
